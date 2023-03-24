@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css" />    
+     <!-- Bootstrap core CSS -->
+     <link href="css/bootstrap.min.css" rel="stylesheet">
+
+     <!-- Custom styles for this template -->
+     <link href="signin.css" rel="stylesheet">
+</head>
+<body onload="onloadInit()">
+
+
+    
+<div id = "lobby" style="display: none;">
+    <div id="playersList" >
+    <h4>Tic Tac Toe</h4>
+    <h1>Lobby</h1>
+    <div id="playersboard">
+        <h2 style="color: dodgerblue"> Players</h2>
+        <ul id="players"></ul>
+    </div>
+    <button id="playButton"  class="btn btn-primary btn-lg" type="button" onClick= "findGame()" >play</button>
+
+    <label id="gameProcess"></label>
+    </div>
+</div>
+    
+    
+    
+    <div  id="welcomeEntry">
+    <h1>Welcome To Tic Tac Toe</h1>
+    <h2> Enter your name:</h2>
+    <br>
+    
+    <input id="name"  class="form-control"></input>
+    <br>
+    <button id="entryNameButton"  class="btn btn-primary btn-lg" type="button" onClick= "sendYourName()">send your name </button>
+    <label id="nameTakenLabel"></label>
+    </div>
+    
+    
+        
+    <div id= "game" class="container" style="display: none;">
+        <div class="row">
+
+        <div class="col-sm">
+        <div id = "Texts"  style="display: none;">
+            <label id="win_state"> </label>
+            <br>
+            <button id ="toLobby" class="btn btn-primary btn-lg" onclick="toLobby()"> Lobby</button>
+        </div>    
+        <!--button id = "logOutButtonFromLobby" onClick= "logOut()" >log out</button-->
+        <div class="board">
+
+            <div class="container">
+                <div class="row ">
+                <h2>Tic Tac Toe</h2>
+                </div>
+                <div class="row turn">
+                <h1 id = "turnCheckButton" name="checkTurn" onClick="checkMyTurn()">check turn</h1>
+                </div>    
+                
+                <div class="row align-items-end ">
+                <h1 id="welcome1"></h1>
+                </div>
+                <div class="row align-items-end ">
+                <h1 id="welcome2"></h1>
+                </div>
+            </div>
+            
+        </div>
+        </div>
+        <div class="col-sm" id="tablecontainer">
+
+            <div class="container">
+                <div class="row">
+                    <div id = "1" name="1" class="col" onClick="handleButtonNumberClick(this)"></div>
+                    <div id = "2" name="2" class="col" onClick="handleButtonNumberClick(this)"></div>
+                    <div id = "3" name="3" class="col" onClick="handleButtonNumberClick(this)"></div>
+                </div>
+                <div class="row">
+                    <div id = "4" name="4" class="col" onClick="handleButtonNumberClick(this)" ></div>
+                    <div id = "5" name="5" class="col" onClick="handleButtonNumberClick(this)"></div>
+                    <div id = "6" name="6" class="col" onClick="handleButtonNumberClick(this)"></div>
+                </div>
+                <div class="row">
+                    <div id = "7" name="7" class="col" onClick="handleButtonNumberClick(this)"></div>
+                    <div id = "8" name="8" class="col" onClick="handleButtonNumberClick(this)"></div>
+                    <div id = "9" name="9" class="col" onClick="handleButtonNumberClick(this)"></div>
+                </div>
+            </div>
+           
+        </div>
+        </div>  
+        </div>  
+    
+
+    
+    
+
+
+    
+            <script  src="entry.js "></script>
+    <script src="lobby.js"></script>
+    <script src="main.js"></script>
+    
+    </script></div>
+
+
+</body>
+</html>
+
+
+
